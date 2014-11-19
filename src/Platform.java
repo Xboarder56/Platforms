@@ -1,8 +1,8 @@
 /** 
-* Butterfly.java
+* Platform.java
  * @author Garrett J. Beasley
- * 11/01/2014
- * Butterfly class for making Butterfly GCompound
+ * 11/16/2014
+ * Platform class for making Platform GCompound
  */
 
  /** Imports for the project */
@@ -26,16 +26,23 @@ public class Platform extends GCompound
 		platformX = xDim;
 		platformY = yDim;
 		
-		/**Calls the butterfly method createButterfly*/
+		/**Calls the platform method createPlatform*/
 		createPlatform();
 	}
 	
-	/**createball Method where it makes the ball for the gcompound*/
+	/**createPlatform Method where it makes the platform for the gcompound*/
 	public void createPlatform()
 	{
+		/**Creates all the GRect used to make the ball based off the set location startX/startY/platformX/platformY*/
 		GRect platform = new GRect(startX,startY, platformX, platformY);
+		
+		/**Sets the color to the color that is passed into the program*/
 		platform.setFillColor(platformColor);
+		
+		/**Sets the objects to filled true*/
 		platform.setFilled(true);
+		
+		/**Adds the objects to the gcompound*/
 		add(platform);
 	}
 }
